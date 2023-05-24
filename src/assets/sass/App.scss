@@ -1,5 +1,23 @@
 body {
   background-color: rgb(153, 216, 153);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h1 {
+    text-align: center;
+  }
+
+  h1,
+  h2 {
+    color: #0e2c0f;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh
+  }
 
   .container {
     display: flex;
@@ -12,14 +30,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    button {
-      padding: 10px 14px;
-      border-radius: 9px;
-      background-color: #fff;
-      border: 0.1px solid rgb(7, 75, 16);
-      cursor: pointer;
-    }
 
     p {
       margin: 3px;
@@ -36,10 +46,11 @@ body {
 
   .hidden-card {
     background-color: #661c1c;
-    border-radius: 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     color: #fff;
-    width: 120px;
-    height: 180px;
+    width: 140px;
+    height: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +66,6 @@ body {
   .card-game {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
 
@@ -64,10 +74,11 @@ body {
   }
 
   .played-card {
-    background-color: #ffffff;
-    border-radius: 13px;
-    width: 120px;
-    height: 180px;
+    width: 140px;
+    height: 210px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,4 +86,118 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
   }
+
+  .back {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    .card-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      width: 120px;
+      height: 180px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+
+      .red {
+        color: red;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .card-value {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .card-suit {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+
+    .hidden-card {
+      background-color: #661c1c;
+    }
+
+    .hand {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+// Style de la modale 
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fond semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    .h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+// Style du bouton
+.button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+.play {
+  cursor: pointer;
+}
+
+.rules {
+  cursor: help;
 }
