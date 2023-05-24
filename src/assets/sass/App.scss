@@ -1,56 +1,78 @@
 body {
-  background-color: green;
+  background-color: rgb(153, 216, 153);
 
-  .header {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .result {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
     button {
-      border-radius: 13px;
-      border: none;
-      padding: 10px;
+      padding: 10px 14px;
+      border-radius: 9px;
+      background-color: #fff;
+      border: 0.1px solid rgb(7, 75, 16);
+      cursor: pointer;
+    }
+
+    p {
+      margin: 3px;
+    }
+  }
+
+  .card-pile {
+    margin-right: 20px;
+
+    ul {
       cursor: pointer;
     }
   }
 
-  .displayCard {
+  .hidden-card {
+    background-color: #661c1c;
+    border-radius: 13px;
+    color: #fff;
+    width: 120px;
+    height: 180px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
 
-    .card {
-      width: 150px;
-      height: 220px;
-      background-color: white;
-      border: 1px solid black;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      font-weight: bold;
+    &:hover {
+      transform: scale(1.05);
     }
   }
-}
 
-.carte {
-  width: 100px;
-  height: 150px;
-  background-color: rgb(82, 31, 10);
-  color: white;
-  border-radius: 13px;
-  margin: 16px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+  .card-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.revelee {
-  background-color: white;
-  color: black
+  .red {
+    color: red;
+  }
+
+  .played-card {
+    background-color: #ffffff;
+    border-radius: 13px;
+    width: 120px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 }
